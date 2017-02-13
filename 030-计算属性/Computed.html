@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Vue!</title>
+	<style>
+	</style>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+	<!-- id 一定要和 el 一致 -->
+	<!-- 动态计算类似于 swift 的计算属性 -->
+	<!-- ⭕️ message 没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。 -->
+
+	<div id="computed-e">
+		<p>Original message: "{{ message }}"</p>
+		<p>Computed reversed message: "{{ reversedMessage }}"</p>
+	</div>
+
+	<div id="computed-setter-e">
+		{{ fullName }}
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
