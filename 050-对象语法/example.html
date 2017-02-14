@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Vue!</title>
+    <style>
+    </style>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<!-- example 只能被一个 div 使用一次 -->
+<div id="example" >
+    <p v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
+        haha
+    </p>
+    <p id="example" v-bind:style="styleObject">
+        hoho
+    </p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

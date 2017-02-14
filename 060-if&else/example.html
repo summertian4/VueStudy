@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Vue!</title>
+    <style>
+    </style>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<!-- example 只能被一个 div 使用一次 -->
+<div id="example" >
+
+    <div v-if="Math.random() > 0.5">
+        Sorry
+    </div>
+    <div v-else>
+        Not sorry
+    </div>
+    <hr/>
+
+    <div v-if="type === 'A'">
+        A
+    </div>
+    <div v-else-if="type === 'B'">
+        B
+    </div>
+    <div v-else-if="type === 'C'">
+        C
+    </div>
+    <div v-else>
+        Not A/B/C
+    </div>
+    <hr/>
+
+    <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username" key="username-input">
+    </template>
+    <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address" key="email-input">
+    </template>
+
+    <br/>
+
+    <button  v-on:click="clicked">changed type</button>
+
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Vue!</title>
+    <style>
+    </style>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="example-1">
+    <button v-on:click="counter += 1">增加 1</button>
+    <p>这个按钮被点击了 {{ counter }} 次。</p>
+</div>
+
+<div id="example-2">
+    <!-- `greet` 是在下面定义的方法名 -->
+    <button v-on:click="greet">Greet</button>
+</div>
+
+<!-- 内联处理器方法 -->
+<!-- 除了直接绑定到一个方法，也可以用内联 JavaScript 语句： -->
+<div id="example-3">
+    <button v-on:click="say('hi')">Say hi</button>
+    <button v-on:click="say('what')">Say what</button>
+
+    <!-- 有时也需要在内联语句处理器中访问原生 DOM 事件。可以用特殊变量 $event 把它传入方法： -->
+    <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
